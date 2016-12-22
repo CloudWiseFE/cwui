@@ -1,0 +1,18 @@
+.cw-navbar-defult {
+  background-color: #2b3643;
+  color: #c6cfda;
+  border: 0;
+}
+.cw-navbar-defult .nav > li > a {
+  color: #c6cfda;
+}
+.cw-navbar-defult .nav > li > a:hover,
+.cw-navbar-defult .nav > li > a:focus,
+.cw-navbar-defult .nav .open > a:hover,
+.cw-navbar-defult .nav .open > a:focus {
+  background-color: #37b4b3;
+  color: #ffffff;
+}
+.cw-navbar-defult .navbar-right {
+  margin-right: 0;
+}
