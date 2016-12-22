@@ -1,0 +1,27 @@
+{
+  "name": "cwui",
+  "version": "0.1.0",
+  "description": "In the bootstrap based on the development of a UI component library.",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CloudWiseFE/cwui.git"
+  },
+  "keywords": [
+    "cwui",
+    "bootstrap",
+    "css",
+    "javascript",
+    "cloudwise"
+  ],
+  "author": "cloudwise front-end team",
+  "bugs": {
+    "url": "https://github.com/CloudWiseFE/cwui/issues"
+  },
+  "homepage": "https://github.com/CloudWiseFE/cwui#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^1.12.4"
+  }
+}
