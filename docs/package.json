@@ -25,6 +25,8 @@
   "homepage": "https://github.com/CloudWiseFE/cwui#readme",
   "dependencies": {},
   "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-preset-es2015": "^6.18.0",
     "gulp": "^3.9.1",
     "gulp-clean": "^0.3.2",
     "gulp-file-include": "^1.0.0",
