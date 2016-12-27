@@ -1,3 +1,7 @@
+.cw-dropdown-menu {
+  border-color: #e7eaf0;
+  margin: 7px 0;
+}
 .cw-dropdown-menu:before {
   position: absolute;
   top: -7px;
@@ -19,9 +23,55 @@
   border-left: 6px solid transparent;
   content: '';
 }
-.cw-dropdown-menu {
-  border-color: #e7eaf0;
-  margin: 7px 0;
+.caret-up {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-bottom: 4px dashed;
+  border-bottom: 4px solid\9;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+.cw_show_icon {
+  display: none;
+}
+.open .cw_hide_icon {
+  display: none;
+}
+.open .cw_show_icon {
+  display: inline-block;
+}
+.cw-toggle {
+  color: #37b4b3;
+  padding: 6px 12px;
+}
+.cw-dropdown-scroll {
+  max-height: 210px;
+}
+.cw-dropdown-scroll .scroller {
+  max-height: 200px;
+}
+.cw-dropdown-scroll ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.cw-dropdown-scroll li > a {
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: 400;
+  line-height: 1.42857143;
+  color: #333;
+  white-space: nowrap;
+}
+.cw-dropdown-scroll li > a:hover,
+.cw-dropdown-scroll li > a:focus {
+  color: #262626;
+  text-decoration: none;
+  background-color: #f5f5f5;
 }
 .cw-navbar-defult {
   background-color: #2b3643;
@@ -56,6 +106,8 @@
 }
 .cw-navbar-defult .navbar-nav > li > .dropdown-menu {
   margin: 7px 0;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
 }
 .cw-navbar-defult .head_img {
   position: absolute;
@@ -85,11 +137,6 @@
   background-color: #3f4f62;
   color: #ffffff;
 }
-.cw-navbar-defult .cw-dropdown-menu {
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-}
 .cw-navbar-defult .cw-dropdown-menu .glyphicon {
   color: #888888;
   font-size: 24px;
@@ -117,6 +164,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  padding-top: 10px;
   bottom: 0;
   background-color: #364150 ;
 }
@@ -135,7 +183,8 @@
   border-top: 1px solid #3d4957;
   color: #b4bcc8;
 }
-.cw-sidebar-menu li a:hover {
+.cw-sidebar-menu li a:hover,
+.cw-sidebar-menu li a.active {
   background: #2C3542;
   color: #ffffff;
 }

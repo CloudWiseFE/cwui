@@ -15,32 +15,63 @@
 <body>
 
 <div class="dropdown">
-    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
         Dropdown
         <span class="caret"></span>
     </button>
-    <ul class="dropdown-menu cw-dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+    <ul class="dropdown-menu cw-dropdown-menu">
+        <li><a href="#">Action</a></li>
+        <li><a href="#">Another action</a></li>
+        <li><a href="#">Something else here</a></li>
+        <li><a href="#">Separated link</a></li>
     </ul>
 </div>
 
 <div class="dropdown">
-    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown">
-        Dropdown
-        <span class="caret"></span>
+    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+        10.0.1
+        <span class="caret cw_hide_icon"></span>
+        <span class="caret-up cw_show_icon"></span>
     </button>
-    <ul class="dropdown-menu cw-dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+    <ul class="dropdown-menu">
+        <li><a href="#">Action</a></li>
+        <li><a href="#">Another action</a></li>
+        <li><a href="#">Something else here</a></li>
+        <li><a href="#">Separated link</a></li>
     </ul>
 </div>
 
+<div class="dropdown">
+    <div class="dropdown-toggle cw-toggle" type="button"  data-toggle="dropdown">
+        10.0.1
+        <span class="caret cw_hide_icon"></span>
+        <span class="caret-up cw_show_icon"></span>
+    </div>
+    <div class="dropdown-menu cw-dropdown-scroll">
+            <ul class="scroller">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else herefdvfeavrea</a></li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">Separated link</a></li>
+            </ul>
+
+        </div>
+</div>
+
+
 <script src="../dist/vender/jquery-1.12.4/jquery.min.js"></script>
 <script src="../dist/vender/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script src="../dist/vender/jquery-slimscroll-1.3.8/jquery.slimscroll.min.js"></script>
+<script>
+    $(function () {
+        $('.scroller').slimScroll()
+    })
+</script>
 </body>
 </html>
