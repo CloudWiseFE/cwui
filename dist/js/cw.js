@@ -1,3 +1,18 @@
+$(function(){
+    $('[data-cw-toggle="cw-collapse"] [data-cw-collapse="cw-collapse"]').click(function(){
+        var open = $(this).hasClass('open');
+        if(open){
+            $(this).removeClass('open');
+            $(this).find('.sub-menu').hide();
+            $(this).find('.arrow').removeClass('open');
+        }else{
+            $('.arrow').removeClass('open');
+            $(this).addClass('open').siblings().removeClass('open');
+            $(this).find('.sub-menu').fadeIn();
+            $(this).find('.arrow').addClass('open');
+        }
+    });
+});
 ;(function($, window, undefined) {
     // outside the scope of the jQuery plugin to
     // keep track of all dropdowns
@@ -39,3 +54,8 @@
 
     $('[data-hover="dropdown"]').dropdownHover();
 })(jQuery, this);
+$(function () {
+    $('.scroller').slimScroll({
+        color:'#888888'
+    })
+});

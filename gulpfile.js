@@ -13,5 +13,6 @@ gulp.task('default', [
 });
 gulp.task('watch', function () {
     gulp.watch('./src/css/**/*.{less,css}', ['less']);
+    gulp.watch('./src/js/**/*.js', ['lib_js']);
 });
 

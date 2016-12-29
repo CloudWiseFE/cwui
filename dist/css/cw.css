@@ -7,6 +7,9 @@ ul {
   margin: 0;
   padding: 0;
 }
+li a {
+  padding: 6px 12px;
+}
 .cw-dropdown-menu {
   border-color: #e7eaf0;
   margin: 7px 0;
@@ -81,6 +84,17 @@ ul {
   color: #262626;
   text-decoration: none;
   background-color: #f5f5f5;
+}
+.sub-menu {
+  display: none;
+  position: relative;
+}
+.sub-menu li a {
+  padding: 5px 20px;
+  background-color: transparent;
+}
+.open .sub-menu {
+  display: block;
 }
 .cw-navbar-defult {
   background-color: #2b3643;
@@ -179,9 +193,7 @@ ul {
   background-color: #364150;
 }
 .cw-sidebar-menu li .sub-menu {
-  display: none;
   background-color: #2C3542;
-  position: relative;
 }
 .cw-sidebar-menu li .sub-menu li {
   padding-left: 15px;
@@ -230,6 +242,12 @@ ul {
   border-top: 1px solid #3d4957;
   color: #b4bcc8;
 }
+.cw-sidebar-menu li a:hover {
+  background-color: #2C3542;
+}
+.cw-collapse-body {
+  padding: 15px;
+}
 .arrow.open:before {
   content: "\f106";
 }
@@ -251,6 +269,12 @@ ul {
 .input-group-addon {
   cursor: pointer;
 }
+.cw-search {
+  border: 1px solid #dddddd;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
 .cw-search .input-group-addon {
   background-color: transparent;
   -webkit-box-shadow: none;
@@ -260,4 +284,36 @@ ul {
   border: 0;
   -webkit-box-shadow: none;
   box-shadow: none;
+}
+.progress-sm {
+  height: 7px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.progress-sm .progress-bar {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.pagination li a,
+.pagination li:first-child a,
+.pagination li:last-child a {
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  margin-right: 10px;
+  color: #37b4b3;
+}
+.pagination li a:hover,
+.pagination li:first-child a:hover,
+.pagination li:last-child a:hover,
+.pagination li a.active,
+.pagination li:first-child a.active,
+.pagination li:last-child a.active {
+  background-color: #37b4b3;
+  border-color: #37b4b3;
+  color: #ffffff;
 }
