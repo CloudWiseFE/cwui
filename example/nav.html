@@ -36,7 +36,7 @@
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#">业务</a></li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">应用 <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">应用 <span class="caret"></span></a>
                     <ul class="dropdown-menu cw-dropdown-menu" role="menu">
                         <li><a href="#">WEB应用</a></li>
                         <li><a href="#">后台应用</a></li>
@@ -108,28 +108,42 @@
 
 
 
-<ul class="cw-sidebar-menu">
-    <li class="open">
-        <a class="active" href="">
+<ul class="cw-sidebar-menu" id="cw-collapse">
+    <li  class="open">
+        <a href="">
             <i class="fa fa-th-large"></i>
             <span class="title">概览</span>
         </a>
     </li>
-    <!--<li class="">-->
-        <!--<a href="">-->
-            <!--<i class="icon_tuopu"></i>-->
-            <!--<span class="title">事务分析</span>-->
-            <!--<span class="arrow "></span>-->
-        <!--</a>-->
-        <!--<ul class="sub-menu" style="">-->
-            <!--<li class="">-->
-                <!--<a href="">事务</a>-->
-            <!--</li>-->
-        <!--</ul>-->
-    <!--</li>-->
-
     <li>
-        <a href="">
+        <a data-cw-toggle="cw-collapse">
+            <i class="icon_tuopu"></i>
+            <span class="title">事务分析</span>
+            <span class="arrow"></span>
+        </a>
+        <ul class="sub-menu">
+            <li class="">
+                <a href="">事务</a>
+            </li>
+            <li class="">
+                <a href="">事务</a>
+            </li>
+        </ul>
+    </li>
+    <li class="">
+        <a data-toggle="cw-collapse">
+            <i class=""></i>
+            <span class="title">事务分析</span>
+            <span class="arrow"></span>
+        </a>
+        <ul class="sub-menu">
+            <li class="">
+                <a href="">事务</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="javascript:;">
             <i class="fa fa-database"></i>
             <span class="title">数据库</span>
         </a>
@@ -146,17 +160,36 @@
             <span class="title">错误</span>
         </a>
     </li>
-
     <li>
-        <a href="">
+        <a>
             <i class="fa fa-cog"></i>
             <span class="title">设置</span>
         </a>
     </li>
 </ul>
 
-
 <script src="../dist/vender/jquery-1.12.4/jquery.min.js"></script>
 <script src="../dist/vender/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script src="../dist/js/cw.min.js"></script>
+<script>
+    $(function(){
+        $('#cw-collapse>li').click(function(){
+            var open = $(this).hasClass('open');
+            if(open){
+                $(this).removeClass('open');
+                $(this).find('.sub-menu').hide();
+                $(this).find('.arrow').removeClass('open');
+            }else{
+                $(this).addClass('open').siblings().removeClass('open');
+                $(this).find('.sub-menu').fadeIn();
+                $(this).find('.arrow').addClass('open');
+            }
+        });
+    })
+
+
+
+
+</script>
 </body>
 </html>

@@ -1,3 +1,12 @@
+a,
+a:hover {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 .cw-dropdown-menu {
   border-color: #e7eaf0;
   margin: 7px 0;
@@ -88,6 +97,7 @@
 }
 .cw-navbar-defult .nav > li > a:hover,
 .cw-navbar-defult .nav > li > a:focus,
+.cw-navbar-defult .nav .open > a,
 .cw-navbar-defult .nav .open > a:hover,
 .cw-navbar-defult .nav .open > a:focus {
   background-color: #37b4b3;
@@ -166,9 +176,46 @@
   padding: 0;
   padding-top: 10px;
   bottom: 0;
-  background-color: #364150 ;
+  background-color: #364150;
 }
-.cw-sidebar-menu li {
+.cw-sidebar-menu li .sub-menu {
+  display: none;
+  background-color: #2C3542;
+  position: relative;
+}
+.cw-sidebar-menu li .sub-menu li {
+  padding-left: 15px;
+}
+.cw-sidebar-menu li .sub-menu li a {
+  color: #ffffff;
+  border-top: 0;
+  border-left: 2px solid #333333;
+}
+.cw-sidebar-menu li .sub-menu li a:hover,
+.cw-sidebar-menu li .sub-menu li a.active {
+  background-color: #3e4b5c;
+  border-left: 2px solid #37b4b3;
+}
+.cw-sidebar-menu li .sub-menu:before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 1;
+  left: 15px;
+  top: 0;
+  bottom: 0;
+  border: 1px solid #232b38;
+  border-width: 0 0 0 1px;
+  margin: 0;
+}
+.cw-sidebar-menu li.open:hover,
+.cw-sidebar-menu li.open {
+  background: #2C3542;
+  color: #ffffff;
+}
+.cw-sidebar-menu li.open:hover .sub-menu,
+.cw-sidebar-menu li.open .sub-menu {
+  border-top: 1px solid #3d4957;
   display: block;
 }
 .cw-sidebar-menu li a {
@@ -183,10 +230,23 @@
   border-top: 1px solid #3d4957;
   color: #b4bcc8;
 }
-.cw-sidebar-menu li a:hover,
-.cw-sidebar-menu li a.active {
-  background: #2C3542;
-  color: #ffffff;
+.arrow.open:before {
+  content: "\f106";
+}
+.arrow:before {
+  float: right;
+  width: 10px;
+  text-align: center;
+  margin-top: -1px;
+  margin-right: 5px;
+  margin-left: 5px;
+  display: inline;
+  font-size: 16px;
+  font-family: FontAwesome;
+  height: auto;
+  content: "\f107";
+  font-weight: 300;
+  text-shadow: none;
 }
 .input-group-addon {
   cursor: pointer;
