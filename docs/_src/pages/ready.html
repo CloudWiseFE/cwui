@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    @@include('components/head.html', {"page":"spec"})
+</head>
+<body>
+@@include('components/ui-header.html')
+
+<div class="main-container page-ready">
+    <h2>说明</h2>
+
+    <p>透视宝样式组件提取</p>
+
+    <h2>版本</h2>
+
+    <p>@@main_version</p>
+
+    <h2>模板</h2>
+
+    <div class="well" id="js_ready_template"></div>
+</div>
+
+@@include('components/js-comm.html'})
+<script src="../js/ready.js"></script>
+</body>
+</html>

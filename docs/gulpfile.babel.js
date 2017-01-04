@@ -3,6 +3,7 @@ import fileinclude from 'gulp-file-include';
 import clean from 'gulp-clean';
 import rename from 'gulp-rename';
 import minifyCss from 'gulp-minify-css';
+import babel from 'gulp-babel';
 import pkg from './package.json';
 
 const paths = {
@@ -26,6 +27,7 @@ gulp.task('html', ['clean_html'], ()=> {
                 main_title: pkg.name,
                 main_keywords: pkg.keywords.join(','),
                 main_description: pkg.description,
+                main_version: pkg.version,
                 main_author: pkg.author,
                 page: null
             }
@@ -48,6 +50,18 @@ gulp.task('css', ['clean_css'], ()=> {
         .pipe(gulp.dest(`${paths.dest}/css/`));
 });
 
+/**
+ * javascript
+ *
+ * http://babeljs.io/docs/setup/#installation
+ */
+gulp.task('js', ()=> {
+    gulp.src(`${paths.src}/js/**/*.js`)
+        .pipe(babel())
+        .pipe(gulp.dest(`${paths.dest}/js/`));
+});
+
+
 /*
  * 文件自动监听
  */
@@ -63,8 +77,14 @@ gulp.task('watch', ['default'], ()=> {
         .on('change', (event)=> {
             console.log('css文件改变！');
         });
+
+    // 监听js文件
+    gulp.watch([`${paths.src}/js/**/*.js`], ['js'])
+        .on('change', (event)=> {
+            console.log('js文件改变！');
+        });
 });
 
-gulp.task('default', ['html', 'css'], ()=> {
+gulp.task('default', ['html', 'css', 'js'], ()=> {
     console.log('build done!');
 });
