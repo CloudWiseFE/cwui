@@ -8,7 +8,7 @@ $(function(){
         }else{
             $('.arrow').removeClass('open');
             $(this).addClass('open').siblings().removeClass('open');
-            $(this).find('.sub-menu').fadeIn();
+            $(this).find('.sub-menu').show();
             $(this).find('.arrow').addClass('open');
         }
     });

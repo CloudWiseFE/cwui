@@ -10,6 +10,60 @@ ul {
 li a {
   padding: 6px 12px;
 }
+.row,
+.col-xs-1,
+.col-sm-1,
+.col-md-1,
+.col-lg-1,
+.col-xs-2,
+.col-sm-2,
+.col-md-2,
+.col-lg-2,
+.col-xs-3,
+.col-sm-3,
+.col-md-3,
+.col-lg-3,
+.col-xs-4,
+.col-sm-4,
+.col-md-4,
+.col-lg-4,
+.col-xs-5,
+.col-sm-5,
+.col-md-5,
+.col-lg-5,
+.col-xs-6,
+.col-sm-6,
+.col-md-6,
+.col-lg-6,
+.col-xs-7,
+.col-sm-7,
+.col-md-7,
+.col-lg-7,
+.col-xs-8,
+.col-sm-8,
+.col-md-8,
+.col-lg-8,
+.col-xs-9,
+.col-sm-9,
+.col-md-9,
+.col-lg-9,
+.col-xs-10,
+.col-sm-10,
+.col-md-10,
+.col-lg-10,
+.col-xs-11,
+.col-sm-11,
+.col-md-11,
+.col-lg-11,
+.col-xs-12,
+.col-sm-12,
+.col-md-12,
+.col-lg-12 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 7.5px;
+  padding-left: 7.5px;
+}
 .cw-dropdown-menu {
   border-color: #e7eaf0;
   margin: 7px 0;
@@ -103,6 +157,8 @@ li a {
 }
 .cw-navbar-defult .navbar-brand {
   padding-top: 12px;
+  width: 180px;
+  text-align: center;
 }
 .cw-navbar-defult .nav > li > a {
   color: #c6cfda;
@@ -294,6 +350,9 @@ li a {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
+.progress {
+  background-color: #ffffff;
+}
 .pagination li a,
 .pagination li:first-child a,
 .pagination li:last-child a {
@@ -316,4 +375,60 @@ li a {
   background-color: #37b4b3;
   border-color: #37b4b3;
   color: #ffffff;
+}
+.cw-white-pad {
+  background-color: #ffffff;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  padding: 0 15px 15px;
+}
+.cw-white-pad .cw-gray-pad {
+  background-color: #f4f4f5;
+  padding: 0 15px 15px;
+}
+.cw-white-pad .cw-group {
+  margin-bottom: 15px;
+}
+.cw-white-pad a.fa {
+  margin-left: 5px;
+  margin-right: 5px;
+  color: #888;
+}
+.cw-white-pad a.fa:hover {
+  color: #37b4b3;
+}
+.cw-title,
+.cw-title-weight,
+.cw-title-border,
+.cw-title-left-border,
+.cw-title-left-block {
+  line-height: 40px;
+  font-size: 14px;
+}
+.cw-title-border {
+  border-bottom: 1px solid #cccccc;
+}
+.cw-title-weight {
+  font-weight: bold;
+}
+.cw-title-bg {
+  font-size: 16px;
+}
+.cw-title-sm {
+  font-size: 12px;
+  line-height: 30px;
+}
+.cw-title-left-border span,
+.cw-title-left-block span {
+  padding-left: 10px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border-left: 5px solid #cecdcd;
+}
+.cw-title-left-block {
+  background-color: #ffffff;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
 }
