@@ -1,0 +1,43 @@
+define(function () {
+    var mapJson = {
+        '上海': 'shanghai',
+        '云南': 'yunnan',
+        '内蒙古': 'neimenggu',
+        '北京': 'beijing',
+        '台湾': 'taiwan',
+        '吉安': '吉安',
+        '吉林': 'jilin',
+        '四川': 'sichuan',
+        '天津': 'tianjin',
+        '宁夏': 'ningxia',
+        '安徽': 'anhui',
+        '山东': 'shandong',
+        '山西': 'shanxi',
+        '广东': 'guangdong',
+        '广西': 'guangxi',
+        '新疆': 'xinjiang',
+        '江苏': 'jiangsu',
+        '江西': 'jiangxi',
+        '河北': 'hebei',
+        '河南': 'henan',
+        '浙江': 'zhejiang',
+        '海南': 'hainan',
+        '湖北': 'hubei',
+        '湖南': 'hunan',
+        '澳门': 'aomen',
+        '甘肃': 'fansu',
+        '福建': 'fujian',
+        '西藏': 'xizang',
+        '贵州': 'guizhou',
+        '辽宁': 'liaoning',
+        '重庆': 'chongqing',
+        '陕西': 'shanxi1',
+        '青海': 'qinghai',
+        '香港': 'xianggang',
+        '黑龙江': 'heilongjiang',
+        //"南海诸岛": "南海诸岛",
+    };
+    return {
+        mapJson: mapJson
+    };
+});
