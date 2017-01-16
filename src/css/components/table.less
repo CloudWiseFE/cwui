@@ -1,0 +1,43 @@
+.table{
+  table-layout:fixed;
+  word-wrap:break-word;
+}
+.table>tbody>tr>td,.table>thead>tr>th{
+  vertical-align: middle;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow: ellipsis;
+}
+.cw-table-break>tbody>tr>td,.cw-table-break>thead>tr>th{
+  word-break: normal;
+  word-wrap:break-word;
+  white-space:normal;
+  overflow: inherit;
+}
+.cw-table>thead>tr>th{
+  background-color: @cw-table-bg;
+  border-bottom-width: 1px;
+}
+.cw-table>tbody>tr>td,.cw-table>thead>tr>th{
+  border-color: @cw-table-border;
+}
+.cw-table>tbody>tr>td a{
+  color:#2b96cd;
+}
+.cw-table-noborder>tbody>tr>td{
+  border-top: none;
+}
+.cw-table-center>tbody>tr>td:first-child,.cw-table-center>thead>tr>th:first-child{
+  text-align: center;
+}
+.cw-table-right>tbody>tr>td:first-child,.cw-table-right>thead>tr>th:first-child{
+  text-align: right;
+}
+.table>thead>tr>th{
+  border-bottom-width: 1px;
+}
+.table-hover>tbody>tr:hover,.table-hover>tbody>tr:hover>td{
+  background-color: #f4f9fc;
+}
+
+
