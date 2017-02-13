@@ -178,6 +178,23 @@ li a {
   background-color: #29c4c3;
   border: 1px solid transparent;
 }
+.btn-default.active,
+.btn-default:active,
+.open > .dropdown-toggle.btn-default {
+  color: #37b4b3;
+}
+.btn-group-sm > .btn-cricle {
+  background-color: transparent;
+  border-color: #ccc;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+}
+.btn-group-sm > .btn-cricle:hover {
+  background-color: #dddddd;
+  border-color: transparent;
+  color: #37b4b3;
+}
 .cw-navbar-defult {
   background-color: #2b3643;
   color: #c6cfda;
