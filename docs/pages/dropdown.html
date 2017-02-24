@@ -138,6 +138,106 @@
         </a>
     </li>
 </ul>
+    <div class="page-container">
+        <h1 class="page-header">下拉菜单 Dropdowns</h1>
+
+        <p class="lead">用于显示链接列表的可切换、有上下文的菜单。下拉菜单的 JavaScript 插件让它具有了交互性。</p>
+        <h2>实例</h2>
+        <p>将下拉菜单触发器和下拉菜单都包裹在 <code>.dropdown</code> 里，或者另一个声明了 <code>position: relative;</code> 的元素。然后加入组成菜单的 HTML 代码。</p>
+        <div class="bs-example" id="dropdown_1">
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                    Dropdown
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu cw-dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="code" data-target="dropdown_1"></div>
+        <p>通过为下拉菜单的父元素设置 <code>.dropup</code> 类，可以让菜单向上弹出（默认是向下弹出的）。</p>
+        <div class="bs-example" id="dropdown_2">
+            <div class="dropup clearfix">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown">
+                    Dropup
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="code" data-target="dropdown_2"></div>
+        <h2>小箭头切换</h2>
+        <p>添加 <code>.cw_hide_icon</code>及 <code>.caret-up.cw_show_icon</code>等元素，可以改变箭头的指向 </p>
+        <div class="bs-example" id="dropdown_3">
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                    10.0.1
+                    <span class="caret cw_hide_icon"></span>
+                    <span class="caret-up cw_show_icon"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="code" data-target="dropdown_3"></div>
+        <h2>不带框的下拉</h2>
+        <div class="bs-example" id="dropdown_5">
+            <div class="dropdown">
+                <div class="dropdown-toggle cw-toggle" type="button" data-toggle="dropdown">
+                    10.0.1
+                    <span class="caret cw_hide_icon"></span>
+                    <span class="caret-up cw_show_icon"></span>
+                </div>
+                <div class="dropdown-menu cw-dropdown-scroll">
+                    <ul class="scroller">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else herefdvfeavrea</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <div class="code" data-target="dropdown_5"></div>
+        <h2>对齐</h2>
+        <p>默认情况下，下拉菜单自动沿着父元素的上沿和左侧被定位为 100% 宽度。 为 <code>.dropdown-menu</code> 添加 <code>.dropdown-menu-right</code> 类可以让菜单右对齐。</p>
+        <div class="bs-callout bs-callout-warning">
+            <h4>可能需要额外的定位May require additional positioning</h4>
+            <p>在正常的文档流中，通过 CSS 为下拉菜单进行定位。这就意味着下拉菜单可能会由于设置了 <code>overflow</code> 属性的父元素而被部分遮挡或超出视口（viewport）的显示范围。如果出现这种问题，请自行解决。</p>
+        </div>
+        <div class="bs-callout bs-callout-warning">
+            <h4>不建议使用 <code>.pull-right</code></h4>
+            <p>一定要使用 <code>.dropdown-menu-right</code> 类。导航条中如需添加右对齐的导航（nav）组件，请使用 <code>.pull-right</code> 的 mixin 版本，可以自动对齐菜单。如需左对齐，请使用 <code>.dropdown-menu-left</code> 类。</p>
+        </div>
+        <div class="bs-example" id="dropdown_4">
+            <div class="dropdown dropdown-menu-right">
+                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                    10.0.1
+                    <span class="caret cw_hide_icon"></span>
+                    <span class="caret-up cw_show_icon"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="code" data-target="dropdown_4"></div>
+    </div>
 </div>
 
 <!-- vender start -->
@@ -147,5 +247,6 @@
 <script src="../../dist/js/cw.min.js"></script>
 <script src="../vender/codebeautifier-0.1.0/codebeautifier.js"></script>
 <!-- vender end -->
+<script src="../js/code.js"></script>
 </body>
 </html>

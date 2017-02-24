@@ -138,6 +138,59 @@
         </a>
     </li>
 </ul>
+    <div class="page-container">
+        <h1 class="page-header">手风琴 Collapse</h1>
+
+        <p class="lead">用于显示链接列表的可切换、有上下文的菜单。下拉菜单的 JavaScript 插件让它具有了交互性。</p>
+        <h2>实例</h2>
+        <p>您可以使用一个链接的 <code>href</code> 属性,或一个按钮数据目标属性。在这两种情况下, <code>data-toggle ="collapse"</code> 是必需的。</p>
+        <div class="bs-example" id="collapse_1">
+            <p>
+                <a class="btn btn-primary" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    Link with href
+                </a>
+                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    Button with data-target
+                </button>
+            </p>
+
+            <div class="collapse" id="collapseExample">
+                <div class="well">
+                    ...
+                </div>
+            </div>
+        </div>
+        <div class="code" data-target="collapse_1"></div>
+        <h2>带箭头和不带箭头的手风琴组</h2>
+        <p>整合分类，添加 <code>.arrow</code>来控制有无箭头</p>
+        <div class="bs-example" id="collapse_2">
+            <ul class="nav" data-cw-toggle="cw-collapse">
+                <li data-cw-collapse="cw-collapse">
+                    <a href="javascript:;">
+                        Collapsible Group Item #1
+                        <span class="arrow"></span>
+                    </a>
+                    <ul class="nav sub-menu">
+                        <li>
+                            <a href="">1</a>
+                        </li>
+                        <li>
+                            <a href="">2</a>
+                        </li>
+                    </ul>
+                </li>
+                <li data-cw-collapse="cw-collapse">
+                    <a href="javascript:;">Collapsible Group Item #2</a>
+                    <div class="sub-menu">
+                        <div class="cw-collapse-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="code" data-target="collapse_2"></div>
+    </div>
 </div>
 
 <!-- vender start -->
@@ -147,5 +200,6 @@
 <script src="../../dist/js/cw.min.js"></script>
 <script src="../vender/codebeautifier-0.1.0/codebeautifier.js"></script>
 <!-- vender end -->
+<script src="../js/code.js"></script>
 </body>
 </html>

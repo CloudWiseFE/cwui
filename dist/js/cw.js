@@ -54,11 +54,11 @@ $(function(){
 
     $('[data-hover="dropdown"]').dropdownHover();
 })(jQuery, this);
-$(function () {
-    $('.scroller').slimScroll({
-        color:'#888888'
-    })
-});
+//$(function () {
+//    $('.scroller').slimScroll({
+//        color:'#888888'
+//    })
+//});
 var table = $('.table-sort');
 table.on('click', 'th', function (e) {
     var parent = $(e.delegateTarget);

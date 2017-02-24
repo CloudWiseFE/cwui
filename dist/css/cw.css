@@ -102,7 +102,6 @@ li a {
   display: inline-block;
   width: 0;
   height: 0;
-  margin-left: 2px;
   vertical-align: middle;
   border-bottom: 4px dashed;
   border-bottom: 4px solid\9;
@@ -174,7 +173,8 @@ li a {
   background-color: #37b4b3;
   border: 1px solid transparent;
 }
-.btn-primary:hover {
+.btn-primary:hover,
+.btn-primary:focus {
   background-color: #29c4c3;
   border: 1px solid transparent;
 }
@@ -394,9 +394,6 @@ li a {
 .progress-sm .progress-bar {
   -webkit-box-shadow: none;
   box-shadow: none;
-}
-.progress {
-  background-color: #ffffff;
 }
 .table {
   table-layout: fixed;
