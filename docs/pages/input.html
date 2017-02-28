@@ -151,57 +151,109 @@
     </li>
 </ul>
     <div class="page-container">
-        <h1 class="page-header">手风琴 Collapse</h1>
+        <h1 class="page-header">输入框组</h1>
+        <p class="lead">通过在文本输入框 <code>&lt;input&gt;</code> 前面、后面或是两边加上文字或按钮，可以实现对表单控件的扩展。为 <code>.input-group</code> 赋予 <code>.input-group-addon</code> 或 <code>.input-group-btn</code> 类，可以给 <code>.form-control</code> 的前面或后面添加额外的元素。</p>
+        <h2>基本实例</h2>
+        <p>在输入框的任意一侧添加额外元素或按钮。你还可以在输入框的两侧同时添加额外元素。</p>
+        <div class="bs-example bs-example-form" id="input_1">
+            <div class="input-group">
+                <span class="input-group-addon" id="basic-addon1">@</span>
+                <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+            </div>
 
-        <p class="lead">用于显示链接列表的可切换、有上下文的菜单。下拉菜单的 JavaScript 插件让它具有了交互性。</p>
-        <h2>实例</h2>
-        <p>您可以使用一个链接的 <code>href</code> 属性,或一个按钮数据目标属性。在这两种情况下, <code>data-toggle ="collapse"</code> 是必需的。</p>
-        <div class="bs-example" id="collapse_1">
-            <p>
-                <a class="btn btn-primary" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                    Link with href
-                </a>
-                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                    Button with data-target
-                </button>
-            </p>
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Recipient's username" aria-describedby="basic-addon2">
+                <span class="input-group-addon" id="basic-addon2">@example.com</span>
+            </div>
 
-            <div class="collapse" id="collapseExample">
-                <div class="well">
-                    ...
-                </div>
+            <div class="input-group">
+                <span class="input-group-addon">$</span>
+                <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                <span class="input-group-addon">.00</span>
+            </div>
+
+            <label for="basic-url">Your vanity URL</label>
+            <div class="input-group">
+                <span class="input-group-addon" id="basic-addon3">https://example.com/users/</span>
+                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
             </div>
         </div>
-        <div class="code" data-target="collapse_1"></div>
-        <h2>带箭头和不带箭头的手风琴组</h2>
-        <p>整合分类，添加 <code>.arrow</code>来控制有无箭头</p>
-        <div class="bs-example" id="collapse_2">
-            <ul class="nav" data-cw-toggle="cw-collapse">
-                <li data-cw-collapse="cw-collapse">
-                    <a href="javascript:;">
-                        Collapsible Group Item #1
-                        <span class="arrow"></span>
-                    </a>
-                    <ul class="nav sub-menu">
-                        <li>
-                            <a href="">1</a>
-                        </li>
-                        <li>
-                            <a href="">2</a>
-                        </li>
-                    </ul>
-                </li>
-                <li data-cw-collapse="cw-collapse">
-                    <a href="javascript:;">Collapsible Group Item #2</a>
-                    <div class="sub-menu">
-                        <div class="cw-collapse-body">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                        </div>
-                    </div>
-                </li>
-            </ul>
+        <div class="code" data-target="input_1"></div>
+        <h2>尺寸</h2>
+        <p>为 <code>.input-group</code> 添加相应的尺寸类，其内部包含的元素将自动调整自身的尺寸。不需要为输入框组中的每个元素重复地添加控制尺寸的类。</p>
+        <div class="bs-example bs-example-form" id="input_2">
+            <div class="input-group input-group-lg">
+                <span class="input-group-addon" id="sizing-addon1">@</span>
+                <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon1">
+            </div>
+
+            <div class="input-group">
+                <span class="input-group-addon" id="sizing-addon2">@</span>
+                <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2">
+            </div>
+
+            <div class="input-group input-group-sm">
+                <span class="input-group-addon" id="sizing-addon3">@</span>
+                <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon3">
+            </div>
         </div>
-        <div class="code" data-target="collapse_2"></div>
+        <div class="code" data-target="input_2"></div>
+        <h2>作为额外元素的多选框和单选框</h2>
+        <p>可以将多选框或单选框作为额外元素添加到输入框组中。</p>
+        <div class="bs-example bs-example-form" id="input_3">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="input-group">
+                          <span class="input-group-addon">
+                            <input type="checkbox" aria-label="...">
+                          </span>
+                          <input type="text" class="form-control" aria-label="...">
+                    </div><!-- /input-group -->
+                </div><!-- /.col-lg-6 -->
+                <div class="col-lg-6">
+                    <div class="input-group">
+                          <span class="input-group-addon">
+                            <input type="radio" aria-label="...">
+                          </span>
+                          <input type="text" class="form-control" aria-label="...">
+                    </div><!-- /input-group -->
+                </div><!-- /.col-lg-6 -->
+            </div><!-- /.row -->
+        </div>
+        <div class="code" data-target="input_3"></div>
+        <h2>作为额外元素的按钮</h2>
+        <p>为输入框组添加按钮需要额外添加一层嵌套，不是 <code>.input-group-addon</code>，而是添加 <code>.input-group-btn</code> 来包裹按钮元素。由于不同浏览器的默认样式无法被统一的重新赋值，所以才需要这样做。</p>
+        <div class="bs-example" id="input_4">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">Go!</button>
+                        </span>
+                        <input type="text" class="form-control" placeholder="Search for...">
+                    </div><!-- /input-group -->
+                </div><!-- /.col-lg-6 -->
+                <div class="col-lg-6">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search for...">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                    </div><!-- /input-group -->
+                </div><!-- /.col-lg-6 -->
+            </div><!-- /.row -->
+        </div>
+        <div class="code" data-target="input_4"></div>
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search for...">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+        </div><!-- /input-group -->
     </div>
 </div>
 

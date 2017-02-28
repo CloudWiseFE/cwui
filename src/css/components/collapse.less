@@ -9,8 +9,42 @@
     //margin: 1px;
   }
 }
+@-webkit-keyframes fadeIn {
+  from {
+    height:0;
+  }
+
+  to {
+    height: auto;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    //opacity: 0;
+    height: 0;
+  }
+
+  to {
+    //opacity: 1;
+    height: auto;
+  }
+}
+
+
+/*
 .open{
   .sub-menu{
     display: block;
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    border: 1px solid #ddd;
+    overflow-y: hidden;
   }
 }
+*/
+

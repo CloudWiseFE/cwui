@@ -155,9 +155,37 @@ li a {
   padding: 5px 20px;
   background-color: transparent;
 }
-.open .sub-menu {
-  display: block;
+@-webkit-keyframes fadeIn {
+  from {
+    height: 0;
+  }
+  to {
+    height: auto;
+  }
 }
+@keyframes fadeIn {
+  from {
+    height: 0;
+  }
+  to {
+    height: auto;
+  }
+}
+/*
+.open{
+  .sub-menu{
+    display: block;
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    border: 1px solid #ddd;
+    overflow-y: hidden;
+  }
+}
+*/
 .btn-cricle-sm {
   border-radius: 10px;
   font-size: 12px;
@@ -165,9 +193,6 @@ li a {
   cursor: pointer;
   color: #FFFFFF;
   background-color: #37b4b3;
-}
-.btn {
-  padding: 6px 25px;
 }
 .btn-primary {
   background-color: #37b4b3;

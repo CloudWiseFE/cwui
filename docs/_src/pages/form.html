@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    @@include('components/head.html', {"page":"spec"})
+</head>
+<body>
+@@include('components/ui-header.html')
+
+<div class="main-container">
+    @@include('components/ui-slider.html')
+    <div class="page-container">
+        <h1 class="page-header">表单 Form</h1>
+        <h2>基本实例</h2>
+        <p>单独的表单控件会被自动赋予一些全局样式。所有设置了 <code>.form-control</code> 类的 <code>&lt;input&gt;</code>、<code>&lt;textarea&gt;</code> 和 <code>&lt;select&gt;</code> 元素都将被默认设置宽度属性为 <code>width: 100%;</code>。 将 <code>label</code> 元素和前面提到的控件包裹在 <code>.form-group</code> 中可以获得最好的排列。</p>
+        <h2>水平排列的表单</h2>
+        <p>通过为表单添加 <code>.form-horizontal</code> 类，并联合使用 Bootstrap 预置的栅格类，可以将 <code>label</code> 标签和控件组水平并排布局。这样做将改变 <code>.form-group</code> 的行为，使其表现为栅格系统中的行（row），因此就无需再额外添加 <code>.row</code> 了。</p>
+        <div class="bs-example-normal">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Remember me
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-default">Sign in</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <h2>基本原始搜索框</h2>
+        <div class="bs-example" id="form_1">
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-addon">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </div>
+                    <input class="form-control" type="text" placeholder="请输入要搜索的...">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="请输入要搜索的...">
+                    <div class="input-group-addon">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="code" data-target="form_1"></div>
+        <h2>搜索框</h2>
+        <p> <code>.input-lg</code>和<code>.input-sm</code>来控制搜索框大小</p>
+        <div class="bs-example" id="form_2">
+            <div class="form-group">
+                <div class="input-group cw-search">
+                    <input class="form-control input-lg" type="text" placeholder="请输入要搜索的...">
+                    <div class="input-group-addon">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group cw-search">
+                    <input class="form-control" type="text" placeholder="请输入要搜索的...">
+                    <div class="input-group-addon">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group cw-search">
+                    <input class="form-control input-sm" type="text" placeholder="请输入要搜索的...">
+                    <div class="input-group-addon">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="code" data-target="form_2"></div>
+
+    </div>
+</div>
+
+@@include('components/js-comm.html'})
+<script src="../js/code.js"></script>
+</body>
+</html>

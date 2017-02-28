@@ -151,57 +151,93 @@
     </li>
 </ul>
     <div class="page-container">
-        <h1 class="page-header">手风琴 Collapse</h1>
+        <h1 class="page-header">表单 Form</h1>
+        <h2>基本实例</h2>
+        <p>单独的表单控件会被自动赋予一些全局样式。所有设置了 <code>.form-control</code> 类的 <code>&lt;input&gt;</code>、<code>&lt;textarea&gt;</code> 和 <code>&lt;select&gt;</code> 元素都将被默认设置宽度属性为 <code>width: 100%;</code>。 将 <code>label</code> 元素和前面提到的控件包裹在 <code>.form-group</code> 中可以获得最好的排列。</p>
+        <h2>水平排列的表单</h2>
+        <p>通过为表单添加 <code>.form-horizontal</code> 类，并联合使用 Bootstrap 预置的栅格类，可以将 <code>label</code> 标签和控件组水平并排布局。这样做将改变 <code>.form-group</code> 的行为，使其表现为栅格系统中的行（row），因此就无需再额外添加 <code>.row</code> 了。</p>
+        <div class="bs-example-normal">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Remember me
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-default">Sign in</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <h2>基本原始搜索框</h2>
+        <div class="bs-example" id="form_1">
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-addon">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </div>
+                    <input class="form-control" type="text" placeholder="请输入要搜索的...">
+                </div>
+            </div>
 
-        <p class="lead">用于显示链接列表的可切换、有上下文的菜单。下拉菜单的 JavaScript 插件让它具有了交互性。</p>
-        <h2>实例</h2>
-        <p>您可以使用一个链接的 <code>href</code> 属性,或一个按钮数据目标属性。在这两种情况下, <code>data-toggle ="collapse"</code> 是必需的。</p>
-        <div class="bs-example" id="collapse_1">
-            <p>
-                <a class="btn btn-primary" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                    Link with href
-                </a>
-                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                    Button with data-target
-                </button>
-            </p>
+            <div class="form-group">
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="请输入要搜索的...">
+                    <div class="input-group-addon">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </div>
+                </div>
+            </div>
 
-            <div class="collapse" id="collapseExample">
-                <div class="well">
-                    ...
+        </div>
+        <div class="code" data-target="form_1"></div>
+        <h2>搜索框</h2>
+        <p> <code>.input-lg</code>和<code>.input-sm</code>来控制搜索框大小</p>
+        <div class="bs-example" id="form_2">
+            <div class="form-group">
+                <div class="input-group cw-search">
+                    <input class="form-control input-lg" type="text" placeholder="请输入要搜索的...">
+                    <div class="input-group-addon">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group cw-search">
+                    <input class="form-control" type="text" placeholder="请输入要搜索的...">
+                    <div class="input-group-addon">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group cw-search">
+                    <input class="form-control input-sm" type="text" placeholder="请输入要搜索的...">
+                    <div class="input-group-addon">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="code" data-target="collapse_1"></div>
-        <h2>带箭头和不带箭头的手风琴组</h2>
-        <p>整合分类，添加 <code>.arrow</code>来控制有无箭头</p>
-        <div class="bs-example" id="collapse_2">
-            <ul class="nav" data-cw-toggle="cw-collapse">
-                <li data-cw-collapse="cw-collapse">
-                    <a href="javascript:;">
-                        Collapsible Group Item #1
-                        <span class="arrow"></span>
-                    </a>
-                    <ul class="nav sub-menu">
-                        <li>
-                            <a href="">1</a>
-                        </li>
-                        <li>
-                            <a href="">2</a>
-                        </li>
-                    </ul>
-                </li>
-                <li data-cw-collapse="cw-collapse">
-                    <a href="javascript:;">Collapsible Group Item #2</a>
-                    <div class="sub-menu">
-                        <div class="cw-collapse-body">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <div class="code" data-target="collapse_2"></div>
+        <div class="code" data-target="form_2"></div>
+
     </div>
 </div>
 
