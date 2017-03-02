@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    @@include('components/head.html', {"page":"spec"})
+</head>
+<body>
+@@include('components/ui-header.html')
+
+<div class="main-container">
+    @@include('components/ui-slider.html')
+    <div class="page-container">
+        <h1 class="page-header">表格 Table</h1>
+
+        <h2>基本实例</h2>
+
+        <p>表格带边框 <code>a</code>标签颜色特殊显示</p>
+        <div class="bs-example" id="table_1">
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>域名</th>
+                    <th>响应时间</th>
+                    <th>吞吐率</th>
+                    <th>请求次数</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><a href="">http://www.baidu.com:80</a></td>
+                    <td>634ms</td>
+                    <td>786rpm</td>
+                    <td>78</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><a href="">http://www.baidu.com:80</a></td>
+                    <td>634ms</td>
+                    <td>786rpm</td>
+                    <td>78</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="code" data-target="table_1"></div>
+        <h2>头部背景表格</h2>
+        <p>通过 <code>.cw-table</code> 来控制 th 的背景有无颜色</p>
+        <div class="bs-example" id="table_2">
+            <table class="table table-bordered cw-table">
+                <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>域名</th>
+                    <th>响应时间</th>
+                    <th>吞吐率</th>
+                    <th>请求次数</th>
+                </tr>
+                </thead>
+
+            </table>
+        </div>
+        <div class="code" data-target="table_2"></div>
+        <h2>带有排序的 表格</h2>
+        <p> <code>.table-sort</code>的增加，会根据点选显示出不同颜色,<code>.table-hover</code>的添加控制鼠标悬浮样式</p>
+        <div class="bs-example" id="table_3">
+            <table class="table table-bordered table-hover cw-table table-sort">
+                <thead>
+                <tr>
+                    <th width="5%">序号</th>
+                    <th width="40%">域名</th>
+                    <th width="30%">响应时间
+                    <span class="fa-stack fa-sm">
+                        <i class="fa fa-stack-1x fa-sort-up blue-color"></i>
+                        <i class="fa fa-stack-1x fa-sort-down"></i>
+                    </span>
+
+                    </th>
+                    <th width="10%">吞吐率
+                    <span class="fa-stack fa-sm">
+                        <i class="fa fa-stack-1x fa-sort-up"></i>
+                        <i class="fa fa-stack-1x fa-sort-down"></i>
+                    </span>
+                    </th>
+                    <th width="15%">请求次数</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td width="5%">1</td>
+                    <td><a href="">http://www.baidu.com:80http://www.baidu.com:80http://www.baidu.com:80http://www.baidu.com:80http://www.baidu.com:80</a>
+                    </td>
+                    <td>634ms</td>
+                    <td>786rpm</td>
+                    <td>78</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><a href="">http://www.baidu.com:80</a></td>
+                    <td>634ms</td>
+                    <td>786rpm</td>
+                    <td>78</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="code" data-target="table_3"></div>
+        <h2>table的溢出问题</h2>
+        <p>td溢出解决，默认的是 多余出现...,通过 <code>.cw-table-break</code>来显示出所有。<code>.table-condensed</code>让表格更加紧凑</p>
+        <div class="bs-example" id="table_4">
+            <table class="table table-bordered cw-table cw-table-break table-condensed table-sort">
+                <thead>
+                <tr>
+                    <th width="5%">序号</th>
+                    <th width="40%">域名
+                <span class="fa-stack fa-sm">
+                        <i class="fa fa-stack-1x fa-sort-up blue-color"></i>
+                        <i class="fa fa-stack-1x fa-sort-down"></i>
+                    </span></th>
+                    <th width="30%">响应时间</th>
+                    <th width="10%">吞吐率</th>
+                    <th width="15%">请求次数</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td width="5%" title="1dafreqgtwh54">1</td>
+                    <td><a href="" title="1dafreqgtwh54">http://www.baidu.com:80http://www.baidu.com:80http://www.baidu.com:80http://www.baidu.com:80http://www.baidu.com:80</a>
+                    </td>
+                    <td>634ms</td>
+                    <td>786rpm</td>
+                    <td>78</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><a href="">http://www.baidu.com:80</a></td>
+                    <td>634ms</td>
+                    <td>786rpm</td>
+                    <td>78</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="code" data-target="table_4"></div>
+        <h2>位置变化</h2>
+        <p> <code>.cw-table-center</code>使第一列居中显示 <code>.cw-table-right</code>使第一列居右显示</p>
+        <div class="bs-example" id="table_5">
+            <table class="table table-bordered cw-table cw-table-center">
+                <thead>
+                <tr>
+                    <th>中间</th>
+                    <th>域名</th>
+                    <th>响应时间</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><a href="">http://www.baidu.com:80</a></td>
+                    <td>634ms</td>
+
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><a href="">http://www.baidu.com:80</a></td>
+                    <td>634ms</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="code" data-target="table_5"></div>
+        <h2>无边框表格</h2>
+        <p><code>.cw-table-noborder</code>使得表格无边框，th有下划线</p>
+        <div class="bs-example" id="table_6">
+            <table class="table cw-table-noborder table-hover">
+                <thead>
+                <tr>
+                    <th width="5%">序号</th>
+                    <th>域名</th>
+                    <th>响应时间</th>
+                    <th>吞吐率</th>
+                    <th>请求次数</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><a href="">http://www.baidu.com:80</a></td>
+                    <td>634ms</td>
+                    <td>786rpm</td>
+                    <td>78</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><a href="">http://www.baidu.com:80</a></td>
+                    <td>634ms</td>
+                    <td>786rpm</td>
+                    <td>78</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="code" data-target="table_6"></div>
+    </div>
+
+</div>
+
+@@include('components/js-comm.html'})
+<script src="../js/code.js"></script>
+</body>
+</html>

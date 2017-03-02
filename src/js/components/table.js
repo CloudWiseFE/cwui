@@ -1,4 +1,5 @@
 var table = $('.table-sort');
+
 table.on('click', 'th', function (e) {
     var parent = $(e.delegateTarget);
     $(this).siblings().find('i').removeClass('blue-color');
@@ -31,4 +32,6 @@ table.on('click', 'th', function (e) {
     } else {
         return false;
     }
+
 });
+$('.table-sort th:has("span")').trigger('click');
