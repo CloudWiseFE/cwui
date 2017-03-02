@@ -105,3 +105,6 @@ body {
 .bs-example-form .input-group{
     margin-bottom: 20px;
 }
+.bs-example-control-sizing input[type=text]+input[type=text], .bs-example-control-sizing select{
+    margin-top: 10px;
+}
