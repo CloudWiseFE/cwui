@@ -176,54 +176,120 @@
     </li>
 </ul>
     <div class="page-container">
-        <h1 class="page-header">分页 Paging</h1>
+        <h1 class="page-header">模态框 Modal</h1>
 
-        <h2>默认分页</h2>
-        <p><code>.pagination-lg</code><code>.pagination-sm</code>使其变大变小，<code>.disabled</code>不能被点击</p>
-        <div class="bs-example" id="paging_1">
-            <nav aria-label="Page navigation">
-                <ul class="pagination">
-                    <li class="disabled">
-                        <a href="#" aria-label="Previous">
-                            <span aria-hidden="true">&laquo;</span>
-                        </a>
-                    </li>
-                    <li class="active"><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li>
-                        <a href="#" aria-label="Next">
-                            <span aria-hidden="true">&raquo;</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+        <p class="lead">模态框经过了优化，更加灵活，以弹出对话框的形式出现，具有最小和最实用的功能集。</p>
+
+        <h2>基本实例</h2>
+
+        <div class="bs-example" id="modal_1">
+            <button type="button" class="btn btn-default" data-toggle="modal" data-target=".bs-example-modal">Large modal</button>
+            <div class="modal fade bs-example-modal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">取消</span></button>
+                            <h4 class="modal-title">Modal title</h4>
+                        </div>
+                        <div class="modal-body">
+                            ...
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                            <button type="button" class="btn btn-primary">保存</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="code" data-target="paging_1"></div>
-        <h2>翻页</h2>
-        <p>用简单的标记和样式，就能做个上一页和下一页的简单翻页。用在像博客和杂志这样的简单站点上棒极了。</p>
-        <div class="bs-example" id="paging_2">
-            <nav aria-label="...">
-                <ul class="pager">
-                    <li><a href="#">Previous</a></li>
-                    <li><a href="#">Next</a></li>
-                </ul>
-            </nav>
+        <div class="code" data-target="modal_1"></div>
+
+        <h2>尺寸大小</h2>
+        <p>模态框提供了三个可选尺寸，通过为 <code>.modal-dialog</code> 增加一个样式调整类实现。</p>
+        <div class="bs-example" id="modal_2">
+            <button type="button" class="btn btn-default" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>
+            <div class="modal fade bs-example-modal-lg">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">取消</span></button>
+                            <h4 class="modal-title">Modal title</h4>
+                        </div>
+                        <div class="modal-body">
+                            ...
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-default" data-toggle="modal" data-target=".bs-example-modal-sm">Small modal</button>
+            <div class="modal fade bs-example-modal-sm">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">取消</span></button>
+                            <h4 class="modal-title">Modal title</h4>
+                        </div>
+                        <div class="modal-body">
+                            ...
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
         </div>
-        <div class="code" data-target="paging_2"></div>
-        <h2>对齐链接</h2>
-        <p>左右对齐</p>
-        <div class="bs-example" id="paging_3">
-            <nav aria-label="...">
-                <ul class="pager">
-                    <li class="previous disabled"><a href="#"><span aria-hidden="true">&larr;</span> Older</a></li>
-                    <li class="next"><a href="#">Newer <span aria-hidden="true">&rarr;</span></a></li>
-                </ul>
-            </nav>
+        <div class="code" data-target="modal_2"></div>
+        <h2>样式分类</h2>
+        <div class="bs-example" id="modal_3">
+            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">
+                demo modal
+            </button>
+            <div class="modal fade" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="cw-modal-header">
+                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">取消</span></button>
+                            <!--<h4 class="modal-title">Modal title</h4>-->
+                            <div class="cw-title-left-block">
+                                <span>普通标题</span>
+                            </div>
+                        </div>
+                        <div class="modal-body">
+                            ...
+                        </div>
+                        <!--<div class="modal-footer">-->
+                        <!--<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>-->
+                        <!--<button type="button" class="btn btn-primary">保存</button>-->
+                        <!--</div>-->
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#cw-modal">
+               super demo modal
+            </button>
+            <div class="modal cw-modal fade" id="cw-modal">
+                <div class="modal-dialog">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">取消</span></button>
+                        <h4 class="modal-title">Modal title</h4>
+                    </div>
+
+                    <div class="cw-white-pad">
+                        ... <br/>
+                        ...<br/>
+                        ...
+                    </div>
+                    <div class="cw-white-pad">
+                        ...<br/>
+                        ...<br/>
+                        ...<br/>
+                        ...
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="code" data-target="paging_3"></div>
+        <div class="code" data-target="modal_3"></div>
     </div>
 </div>
 
