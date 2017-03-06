@@ -162,6 +162,103 @@
         </a>
     </li>
 </ul>
+    <div class="page-container">
+        <h1 class="page-header">标签页 Table</h1>
+
+        <h2>基本实例</h2>
+
+        <p><code>.nav-tabs</code>让标签主题为边框</p>
+
+        <div class="bs-example" id="tab_1">
+            <ul class="nav nav-tabs" role="tablist">
+                <li><a href="#home" id="home-tab" data-toggle="tab">Home</a></li>
+                <li><a href="#profile" id="profile-tab" data-toggle="tab">Profile</a></li>
+                <li class="dropdown active">
+                    <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span
+                            class="caret"></span></a>
+                    <ul class="dropdown-menu" aria-labelledby="myTabDrop1" id="myTabDrop1-contents">
+                        <li class="active"><a href="#dropdown1" role="tab" id="dropdown1-tab" data-toggle="tab">@fat</a>
+                        </li>
+                        <li><a href="#dropdown2" role="tab" id="dropdown2-tab">@mdo</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade" id="home">
+                    <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua,
+                        retro synth master cleanse.</p>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="profile">
+                    <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee
+                        squid.Exercitation +1 labore velit</p>
+                </div>
+                <div role="tabpanel" class="tab-pane fade active in" id="dropdown1">
+                    <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo
+                        retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft
+                        beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. </p>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="dropdown2">
+                    <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out
+                        master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan
+                        DIY</p>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="code" data-target="tab_1"></div>
+        <h2>下划线的标签页</h2>
+
+        <p><code>.cw-tabs</code>让标签主题为下划线</p>
+
+        <div class="bs-example" id="tab_2">
+            <ul class="nav cw-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#overview" role="tab" data-toggle="tab">概览</a></li>
+                <li role="presentation"><a href="#list" role="tab" data-toggle="tab">列表</a></li>
+                <li role="presentation"><a href="#time" role="tab" data-toggle="tab">响应时间</a></li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="overview">
+                    概览
+                </div>
+                <div role="tabpanel" class="tab-pane" id="list">
+                    I recently overheard someone say in a conversation that
+                    列表
+                </div>
+                <div role="tabpanel" class="tab-pane" id="time">
+                    Love has been experienced as a life of living poetry. Love
+                    响应时间
+                </div>
+            </div>
+        </div>
+        <div class="code" data-target="tab_2"></div>
+        <h2>点击背景变化的标签页</h2>
+
+        <p><code>.cw-tabs-blue</code>让标签主题为蓝色背景</p>
+
+        <div class="bs-example" id="tab_3">
+            <ul class="nav cw-tabs-blue" role="tablist">
+                <li role="presentation" class="active"><a href="#yuming" role="tab" data-toggle="tab">按域名显示</a></li>
+                <li role="presentation"><a href="#qingqiu" role="tab" data-toggle="tab">安请求显示</a></li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="yuming">
+                    What is Love? The eternal question we all carry around deep within our heart. Love is the
+                    eternalsearch.
+
+                </div>
+                <div role="tabpanel" class="tab-pane" id="qingqiu">
+                    I recently overheard someone say in a conversation that there is no such thing as “ unconditional
+                    love .” I would have to agree, although for different reasons.
+                </div>
+            </div>
+
+        </div>
+        <div class="code" data-target="tab_3"></div>
+    </div>
 </div>
 
 <!-- vender start -->
@@ -171,5 +268,6 @@
 <script src="../../dist/js/cw.min.js"></script>
 <script src="../vender/codebeautifier-0.1.0/codebeautifier.js"></script>
 <!-- vender end -->
+<script src="../js/code.js"></script>
 </body>
 </html>
